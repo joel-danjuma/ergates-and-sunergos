@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 const SectionTitle = (props) => {
   return (
     <div
-      className={`flex w-full flex-col lg:py-[80px] py-[40px] z-10 items-center justify-center text-center
+      className={`flex w-full flex-col lg:py-[80px] py-[40px] lg:px-0 px-4 z-10 items-center justify-center text-center
       }`}
     >
       {props.title && (

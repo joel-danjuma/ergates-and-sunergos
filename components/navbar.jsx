@@ -17,18 +17,26 @@ const Nav = () => {
       <Navbar
         maxWidth="full"
         position="sticky"
-        className="lg:px-[70px] px-0 py-4 bg-[#F8D046]"
+        className="lg:px-[70px] px-0 py-4 bg-[#F8D046] text-[#111757]"
         isBordered
       >
         <NavbarContent justify="start">
           <NavbarBrand>
-            <p className="font-bold text-xl text-inherit">Ergates & Sunergos</p>
+            <p className="font-bold text-xl text-inherit lg:flex hidden ">
+              Ergates & Sunergos
+            </p>
+            <p className="font-bold text-xl text-inherit lg:hidden flex ">
+              E & S
+            </p>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="lg:flex hidden" justify="center">
           {siteConfig.navItems.map((item, i) => (
             <NavbarItem key={i}>
-              <Link href={item.href} className="font-bold text-lg">
+              <Link
+                href={item.href}
+                className="font-bold text-lg hover:text-[#333333]"
+              >
                 {item.label}
               </Link>
             </NavbarItem>
@@ -40,10 +48,10 @@ const Nav = () => {
           </NavbarItem>
           <NavbarItem className="lg:flex hidden">
             <div className="w-full flex lg:space-x-4 space-x-2">
-              <Button color="primary" className="p-4 lg:text-lg text-sm ">
+              <Button className="p-4 lg:text-lg text-sm bg-[#1395D8] text-white ">
                 Login
               </Button>
-              <Button color="secondary" className="p-4">
+              <Button className="p-4 bg-[#333333] lg:text-lg text-sm text-white">
                 Register
               </Button>
             </div>

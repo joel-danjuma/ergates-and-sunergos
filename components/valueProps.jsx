@@ -7,24 +7,24 @@ import {
   Button,
 } from "@nextui-org/react";
 
-const valueProps = [{}];
-
 const ValueProps = () => {
   return (
-    <section className="bg-[#FBF4DF]">
-      <div className="p-4 ">
+    <section className="">
+      <div className="">
         <SectionTitle title="Comprehensive Training and Consulting Solutions Tailored to Your Needs">
-          With A Focus on individual attention we are commited to delivering
+          With a focus on individual attention we are commited to delivering
           customized strategies, empowering your workforce , and guiding your
           business to sustainable growth and excellence
         </SectionTitle>
-        <div className="container-div lg:gap-[40px] gap-[20px]">
+        <div className=" container-div lg:gap-[40px] gap-[20px] ">
           <div className="w-full">
-            <Card className="lg:h-[440px] h-fit text-start p-4 bg-white/80 ">
-              <CardHeader className="text-2xl">
-                Our Approach to Leadership <br /> Development
+            <Card className="lg:h-[462px] h-fit text-start p-4 ">
+              <CardHeader className="text-2xl font-bold text-[#111757]">
+                <p>
+                  Our Approach to Leadership <br /> Development
+                </p>
               </CardHeader>
-              <CardBody className="lg:space-y-4 space-y-2 text-xl">
+              <CardBody className="lg:space-y-4 space-y-2 text-xl text-[#111757]">
                 <p>
                   Ergates and Sunergos is a premier provider of leadership
                   development solutions that unleash the full potential of
@@ -44,22 +44,24 @@ const ValueProps = () => {
             </Card>
           </div>
           <div className="w-full">
-            <Card className="lg:h-[440px] h-fit text-start p-4 bg-white/80 ">
-              <CardHeader className="text-2xl">
-                <p>Leadership development expands a leader&apos;s impact</p>
+            <Card className="lg:h-[462px] h-fit text-start p-4 ">
+              <CardHeader className="text-2xl font-bold text-[#111757]">
+                <p>
+                  Leadership development expands <br /> a leader&apos;s impact
+                </p>
               </CardHeader>
-              <CardBody className="lg:space-y-4 space-y-2 text-xl">
+              <CardBody className="lg:space-y-4 space-y-2 text-xl text-[#111757]">
                 <p>
                   As leaders adopt and internalize principles of individual
                   effectiveness they :
                 </p>
                 <ul className="lg:space-y-4 space-y-2">
-                  <li>- Build Charecter and Competence</li>
+                  <li>Build Charecter and Competence</li>
                   <li>
-                    - Identify their purpose and connect it with key business
+                    Identify their purpose and connect it with key business
                     goals
                   </li>
-                  <li>- Develop emotional resilience and agility</li>
+                  <li>Develop emotional resilience and agility</li>
                 </ul>
               </CardBody>
               <CardFooter>

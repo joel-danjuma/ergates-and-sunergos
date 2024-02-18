@@ -1,14 +1,16 @@
 import Image from "next/image";
-import logo from "../public/heroImg4.svg";
+// import logo from "../public/heroImg4.svg";
+import logo from "../public/sphere.svg";
 import { Button } from "@nextui-org/react";
 
 const Hero = () => {
   return (
-    <section className=" bg-[#F8D046] ">
+    <section className=" bg-[#F8D046] py-4 ">
       <div className="container-div lg:gap-[100px] gap-[60px] ">
-        <div className="w-full flex flex-col space-y-[32px] lg:p-0 px-4 lg:py-14 py-0 ">
-          <h1 className="lg:text-7xl text-4xl w-full ">
-            Empowering Excellence <br /> Through Training and Consulting
+        <div className="w-full flex flex-col space-y-[32px] lg:p-0 lg:py-14 py-0 ">
+          <h1 className="lg:text-7xl  text-4xl w-full ">
+            Empowering Excellence <br />
+            Through Training and Consulting
           </h1>
           <h2>
             Our Expert Training and Consultation Services pave the way for your
@@ -16,10 +18,12 @@ const Hero = () => {
             and exceptional performance
           </h2>
           <div className="w-full flex lg:space-x-4 space-x-2">
-            <Button color="primary" className="p-4 lg:text-lg text-sm ">
+            <Button className="p-4 lg:text-lg text-sm text-white bg-[#1395D8] ">
               Start Now
             </Button>
-            <Button className="p-4 bg-[#5B57EB] text-white">Contact Us </Button>
+            <Button className="p-4 bg-[#333333] lg:text-lg text-sm text-white">
+              Contact Us{" "}
+            </Button>
           </div>
           <div className="w-full p-4 lg:text-xl text-sm lg:flex lg:flex-row flex-col justify-between border border-black rounded-lg">
             <p>Individuals</p>

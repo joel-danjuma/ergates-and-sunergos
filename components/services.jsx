@@ -7,6 +7,7 @@ import {
   CardHeader,
   Button,
 } from "@nextui-org/react";
+import Link from "next/link";
 
 const courses = [
   {
@@ -67,22 +68,22 @@ const courses = [
 
 const Services = () => {
   return (
-    <section className="p-4 bg-[#FBF4DF]">
+    <section className="p-4">
       <SectionTitle title="Programs To Elevate Your Workforce">
         Experiential and Transformational Leadership Training
       </SectionTitle>
-      <div className="grid lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 grid-rows-4 mx-auto container p-4 lg:gap-4 gap-2">
+      <div className="grid lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 grid-rows-4 mx-auto container lg:p-4 lg:gap-4 gap-2">
         {courses.map((item, i) => (
           <Card
             key={i}
-            className="lg:col-span-1 lg:row-span-1 h-[420px] p-4 bg-white/80"
+            className="lg:col-span-1 lg:row-span-1 min-h-[420px] h-fit p-4"
           >
             {/* <CardHeader className="flex-col text-start space-y-2">
               
             </CardHeader> */}
 
-            <CardBody className="space-y-4">
-              <p className="text-blue-500 text-start text-bold items-start">
+            <CardBody className="space-y-4 text-[#111757]">
+              <p className="text-[#5B57EB] text-start text-bold items-start">
                 {item.feeStatus}
               </p>
               <p className="text-2xl">{item.title}</p>
@@ -96,6 +97,11 @@ const Services = () => {
           </Card>
         ))}
       </div>
+      {/* <div className="w-full h-fit flex justify-center items-center my-10">
+        <Button>
+          <Link href="#">Learn More</Link>
+        </Button>
+      </div> */}
     </section>
   );
 };
