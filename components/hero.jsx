@@ -1,6 +1,6 @@
 import Image from "next/image";
-// import logo from "../public/heroImg4.svg";
-import logo from "../public/sphere.svg";
+import logo from "../public/heroImg4.svg";
+// import logo from "../public/sphere.svg";
 import { Button } from "@nextui-org/react";
 
 const Hero = () => {
