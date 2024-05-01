@@ -23,12 +23,16 @@ const Nav = () => {
       >
         <NavbarContent justify="start">
           <NavbarBrand>
-            <p className="font-bold text-xl text-inherit lg:flex hidden ">
-              Ergates & Sunergos
-            </p>
-            <p className="font-bold text-xl text-inherit lg:hidden flex ">
-              E & S
-            </p>
+            <Link href="/">
+              <p className="font-bold text-xl text-inherit lg:flex hidden ">
+                Ergates & Sunergos
+              </p>
+            </Link>
+            <Link href={"/"}>
+              <p className="font-bold text-xl text-inherit lg:hidden flex ">
+                E & S
+              </p>
+            </Link>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="lg:flex hidden" justify="center">
