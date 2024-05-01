@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { siteConfig } from "../config/site";
-import Nav from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +52,7 @@ export default function RootLayout({ children }) {
           <div className="main">
             <div className="gradient" />
           </div>
-          <Nav />
+
           <main className="max-w-[1440px] glassmorphism text-[#111757]">
             {children}
           </main>

@@ -1,22 +1,23 @@
 import SectionTitle from "./sectionTitle";
-import { Card, CardBody, CardHeader, Avatar } from "@nextui-org/react";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
+// import { Card, CardBody, CardHeader, Avatar } from "@nextui-org/react";
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+// import Image from "next/image";
+// import Marquee from "react-fast-marquee";
 
 const testimonials = [
   {
     name: `John Doe`,
-    company: `Alphabet Inc.`,
+    title: `Alphabet Inc.`,
     // image: `/images/social-1.webp`,
-    text: `Commodo Lorem consequat ea consectetur pariatur proident excepteur.
+    quote: `Commodo Lorem consequat ea consectetur pariatur proident excepteur.
         Pariatur eiusmod minim minim ipsum tempor aute excepteur minim eu nisi laboris.
         Duis sunt labore eu eu cupidatat labore commodo id aliquip.`,
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -24,9 +25,9 @@ const testimonials = [
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -34,9 +35,9 @@ const testimonials = [
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -44,9 +45,9 @@ const testimonials = [
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -54,9 +55,9 @@ const testimonials = [
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -64,9 +65,9 @@ const testimonials = [
   },
   {
     name: `Jack Doe`,
-    company: `Amazon.com, Inc.`,
+    title: `Amazon.com, Inc.`,
     // image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
+    quote: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
         Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
         Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
         Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
@@ -82,32 +83,11 @@ const Testimonials = () => {
         transformative power of our services, directly from those who have
         benefited
       </SectionTitle>
-      <Marquee direction="left" pauseOnHover="true">
-        {testimonials.map((item, i) => (
-          <div key={i} className="w-full px-4">
-            <Card className="w-[520px] lg:h-[200px] h-[240px]">
-              <CardHeader className="flex flex-row gap-2">
-                <Avatar src={item.name}></Avatar>
-                <p>{item.name}</p>
-              </CardHeader>
-              <CardBody>{item.text}</CardBody>
-            </Card>
-          </div>
-        ))}
-      </Marquee>
-      <Marquee direction="right" pauseOnHover="true">
-        {testimonials.map((item, i) => (
-          <div key={i} className="w-full px-4">
-            <Card className="max-w-[520px] lg:h-[200px] h-[240px]">
-              <CardHeader className="flex flex-row gap-2">
-                <Avatar src={item.name}></Avatar>
-                <p>{item.name}</p>
-              </CardHeader>
-              <CardBody>{item.text}</CardBody>
-            </Card>
-          </div>
-        ))}
-      </Marquee>
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
     </section>
   );
 };

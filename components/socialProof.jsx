@@ -8,7 +8,7 @@ const SocialProof = () => {
   return (
     <section className="flex flex-col justify-center items-center gap-[24px] p-6 lg:py-[52px] lg:px-[124px] bg-[url('../public/BG.svg')]">
       <h3 className="text-center text-white">
-        We Collaborate With 250+ Leading Companies And Institutions
+        We Collaborate With Industry Leading Companies And Institutions
       </h3>
       <div className="w-full flex justify-center items-center flex-row  gap-[24px]">
         <Logo1 />

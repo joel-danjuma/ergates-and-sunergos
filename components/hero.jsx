@@ -1,9 +1,23 @@
+"use client";
+import {
+  Modal,
+  ModalContent,
+  // ModalHeader,
+  ModalBody,
+  // ModalFooter,
+  Button,
+  // Input,
+  useDisclosure,
+} from "@nextui-org/react";
 import Image from "next/image";
+import Script from "next/script";
 import logo from "../public/heroImg4.svg";
-// import logo from "../public/sphere.svg";
-import { Button } from "@nextui-org/react";
 
 const Hero = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleOpen = () => {
+    onOpen();
+  };
   return (
     <section className=" bg-[#F8D046] py-4 ">
       <div className="container-div lg:gap-[100px] gap-[60px] ">
@@ -21,9 +35,24 @@ const Hero = () => {
             <Button className="p-4 lg:text-lg text-sm text-white bg-[#1395D8] ">
               Start Now
             </Button>
-            <Button className="p-4 bg-[#333333] lg:text-lg text-sm text-white">
+            {/* <Button className="p-4 bg-[#333333] lg:text-lg text-sm text-white">
               Contact Us{" "}
+            </Button> */}
+            <Button
+              onPress={() => handleOpen()}
+              className="p-4 bg-[#333333] lg:text-lg text-sm text-white"
+            >
+              Contact Us
             </Button>
+            <Modal size="xl" isOpen={isOpen} onClose={onClose}>
+              <ModalContent>
+                <ModalBody
+                  className="p-0"
+                  data-tf-live="01HWN4M5S6TJ66ENPJ3HRX41AT"
+                />
+                <Script src="//embed.typeform.com/next/embed.js" />
+              </ModalContent>
+            </Modal>
           </div>
           <div className="w-full p-4 lg:text-xl text-sm lg:flex lg:flex-row flex-col justify-between border border-black rounded-lg">
             <p>Individuals</p>
