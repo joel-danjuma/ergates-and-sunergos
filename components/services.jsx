@@ -18,7 +18,7 @@ export default function Services() {
         customized strategies, empowering your workforce , and guiding your
         business to sustainable growth and excellence
       </SectionTitle>
-      <BentoGrid className="p-4">
+      <BentoGrid className="p-4 h-full">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -33,74 +33,40 @@ export default function Services() {
     </>
   );
 }
-const variants = {
-  initial: {
-    backgroundPosition: "0 50%",
-  },
-  animate: {
-    backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-  },
-};
+
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 
-// const Skeleton = () => {
-//   const variants = {
-//     initial: {
-//       backgroundPosition: "0 50%",
-//     },
-//     animate: {
-//       backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-//     },
-//   };
-//   return (
-//     <motion.div
-//       initial="initial"
-//       animate="animate"
-//       variants={variants}
-//       transition={{
-//         duration: 5,
-//         repeat: Infinity,
-//         repeatType: "reverse",
-//       }}
-//       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-//       style={{
-//         background:
-//           "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-//         backgroundSize: "400% 400%",
-//       }}
-//     >
-//       <motion.div className="h-full w-full rounded-lg"></motion.div>
-//     </motion.div>
-//   );
-// };
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Training and Development",
+    description:
+      "Our Training and Development program is designed to enhance leadership and management skills, focusing on topics such as communication, team building, and problem-solving. Our expert trainers will work with you to develop a customized training plan tailored to your organization's specific needs, ensuring your leadership team is equipped to drive success. Whether you're looking to upskill existing staff or onboard new leaders, our training programs will empower your team to achieve their full potential.",
     header: <Skeleton />,
     className: "md:col-span-2",
     // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Recruitment services",
+    description:
+      "Our Recruitment services are designed to help you find the best talent to fuel your organization's growth. Our expert recruiters will work closely with you to understand your company culture and requirements, utilizing our extensive network to identify and attract top contenders. From initial screening to final interviews, we'll manage the entire recruitment process, ensuring you find the perfect fit for your team. Trust us to find the talent that drives your business forward.",
     header: <Skeleton />,
     className: "md:col-span-1",
     // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "HR Setup and Consultation",
+    description:
+      "Establishing a HR setup from scratch or optimizing your existing HR function can be daunting. Our HR Setup and Consultation services are designed to help you build a robust HR infrastructure tailored to your organization's unique needs. Our team of experts will work with you to develop a customized HR strategy, ensuring compliance with local regulations, implementing effective policies, and providing guidance on employee engagement and retention strategies.",
     header: <Skeleton />,
     className: "md:col-span-1",
     // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Talent Management and Retention",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "In today's competitive job market, retaining top talent is crucial for long-term business success. Our Talent Management and Retention course is designed to equip your HR team with strategies to attract, engage, and retain top performers. Learn how to develop a culture of recognition, create effective loyalty programs, and design retention strategies that drive employee satisfaction and productivity.",
     header: <Skeleton />,
     className: "md:col-span-2",
     // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,

@@ -34,7 +34,9 @@ const Hero = () => {
           </h2>
           <div className="w-full flex lg:space-x-4 space-x-2">
             <Button className="p-4 lg:text-lg text-sm text-white bg-[#1395D8] ">
-              <Link href="#">Join our Telegram</Link>
+              <Link href="https://t.me/LEADERSHIP_EMPLOYABILITY_ACADEMY">
+                Join our Telegram
+              </Link>
             </Button>
             {/* <Button className="p-4 bg-[#333333] lg:text-lg text-sm text-white">
               Contact Us{" "}
