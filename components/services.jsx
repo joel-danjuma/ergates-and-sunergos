@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
+import SectionTitle from "./sectionTitle";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 // import {
 //   IconClipboardCopy,
@@ -11,18 +12,25 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 export default function Services() {
   return (
-    <BentoGrid className="p-4">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={item.className}
-          // icon={item.icon}
-        />
-      ))}
-    </BentoGrid>
+    <>
+      <SectionTitle title="Comprehensive Training and Consulting Solutions Tailored to Your Needs">
+        With a focus on individual attention we are commited to delivering
+        customized strategies, empowering your workforce , and guiding your
+        business to sustainable growth and excellence
+      </SectionTitle>
+      <BentoGrid className="p-4">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={item.className}
+            // icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
+    </>
   );
 }
 const variants = {

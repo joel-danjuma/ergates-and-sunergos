@@ -49,14 +49,14 @@ export const BentoGridItem = ({
         )}
       >
         {/* <CardHeader className="">{header}</CardHeader> */}
-        {header}
-        <CardBody className="group-hover/bento:translate-x-2 transition duration-200 min-h-[200px]">
-          <div>
-            {feeStatus}
-            <p className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+        {/* {header} */}
+        <CardBody className="group-hover/bento:translate-x-2 transition duration-200 min-h-[400px]">
+          <div className="relative">
+            <div className="absolute top-4 right-4">{feeStatus}</div>
+            <p className="font-sans font-bold text-[#111757] text-xl mb-2 mt-2">
               {title}
             </p>
-            <p className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
+            <p className="font-sans font-normal text-[#111757] text-lg ">
               {description}
             </p>
           </div>

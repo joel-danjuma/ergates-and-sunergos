@@ -91,7 +91,7 @@ const Courses = () => {
             </CardBody>
             <CardFooter>
               <Button color="primary" className="p-4">
-                Learn More
+                Coming Soon
               </Button>
             </CardFooter>
           </Card>

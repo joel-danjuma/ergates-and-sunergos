@@ -2,6 +2,10 @@ import Image from "next/image";
 import img2 from "@/public/pic1.jpeg";
 import img from "@/public/pic2.jpeg";
 import img3 from "@/public/pic3.jpeg";
+import img4 from "@/public/pic6.jpeg";
+import img5 from "@/public/pic4.jpeg";
+import img6 from "@/public/pic5.jpeg";
+import Link from "next/link";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 const LEDA = () => {
   const words = [
@@ -27,15 +31,15 @@ const LEDA = () => {
   ];
   return (
     <section>
-      <div className="px-8 py-24 w-full lg:px-20">
-        <div className="max-w-2xl px-0 flex flex-col justify-center items-center mx-auto">
+      <div className="px-8 py-24 w-full flex flex-col justify-center items-center lg:px-20">
+        <div className="max-w-4xl px-0 flex flex-col justify-center items-center mx-auto">
           <TypewriterEffect words={words} />
           {/* <h1 className="text-4xl font-semibold tracking-tighter text-gray-900 lg:text-6xl text-balance">
             Building one pagers together,
 
             <span className="text-gray-600">wherever and anywhere</span>
           </h1> */}
-          <p className="mt-4 text-base font-medium text-gray-500 text-balance">
+          <p className="mt-4 text-center text-base font-medium text-gray-500 text-balance">
             Develop the leadership skills and employability strategies to
             achieve your career aspirations and stay ahead in the rapidly
             changing job market.
@@ -130,13 +134,13 @@ const LEDA = () => {
           </div>
           <div className="grid gap-2 mt-2 text-center md:grid-cols-3">
             <div>
-              <div className="p-2 overflow-hidden border rounded-3xl">
-                {/* <Image
+              <div className="p-2 overflow-hidden border rounded-3xl relative h-[400px]">
+                <Image
                   alt="img"
+                  src={img4}
                   fill
-                  src="../images/placeholders/rectangle1.svg"
-                  className="w-full h-full mx-auto rounded-2xl"
-                /> */}
+                  className="object-cover min-h-[40px] border shadow-2xl rounded-2xl"
+                />
               </div>
               <div className="mt-4">
                 <p className="font-medium text-gray-900">
@@ -152,13 +156,13 @@ const LEDA = () => {
               </div>
             </div>
             <div>
-              <div className="p-2 overflow-hidden border rounded-3xl">
-                {/* <Image
+              <div className="p-2 relative overflow-hidden border rounded-3xl h-[400px]">
+                <Image
                   alt="img"
+                  src={img5}
                   fill
-                  src="../images/placeholders/rectangle1.svg"
-                  className="w-full h-full mx-auto rounded-2xl"
-                /> */}
+                  className="object-cover min-h-[40px] border shadow-2xl rounded-2xl"
+                />
               </div>
               <div className="px-8 mt-4">
                 <p className="font-medium text-gray-900">
@@ -174,12 +178,13 @@ const LEDA = () => {
               </div>
             </div>
             <div>
-              <div className="p-2 overflow-hidden border rounded-3xl">
-                {/* <Image
+              <div className="p-2 overflow-hidden border rounded-3xl relative h-[400px]">
+                <Image
                   alt="img"
-                  src="../images/placeholders/rectangle1.svg"
-                  className="w-full h-full mx-auto rounded-2xl"
-                /> */}
+                  src={img6}
+                  fill
+                  className="object-cover min-h-[40px] border shadow-2xl rounded-2xl"
+                />
               </div>
               <div className="px-8 mt-4">
                 <p className="font-medium text-gray-900">
@@ -195,6 +200,14 @@ const LEDA = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-center items-center">
+        <button className="p-[3px] relative">
+          <div className="absolute inset-0 bg-gradient-to-r to-[#1395D8] from-cyan-500 rounded-lg" />
+          <div className="px-8 py-2  bg-[#333333] rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            <Link href={"#"}>Join LEDA</Link>
+          </div>
+        </button>
       </div>
     </section>
   );
